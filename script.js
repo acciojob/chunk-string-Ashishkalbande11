@@ -1,5 +1,23 @@
 function stringChop(str, size) {
   // your code here
+	 let res = [];
+    let string = "";
+    let len = 0;
+    for(let s of str){
+        if(len + 1 > size){
+            res.push(string);
+            string = s;
+            len = 1;
+        }else{
+            string += s;
+            len++;
+        }
+    }
+    if(string.length > 0){
+        res.push(string);
+    }
+    return res;
+	
 }
 
 // Do not change the code below
